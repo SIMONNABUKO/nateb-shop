@@ -1,11 +1,12 @@
-.head, .lang, .navbar, .ul, .featured-item, .collection-item, .blog-item, .footer-content{
+.head, .lang, .navbar, .ul, .featured-item, .collection-item, .blog-item,
+ .footer-content, .about-item, .team-item, .about-head{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
     
 }
-.call-2-action, .call-to-action-2{
+.call-2-action, .call-to-action-2, .intro{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -18,7 +19,8 @@
     margin-top: 100px;
     align-self: center;
 }
-.featured, .collection, .blog, .blog-content, .footer, .footer-content-item{
+.featured, .collection, .blog, .blog-content, .footer, .footer-content-item,
+ .about, .about-content, .team{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
