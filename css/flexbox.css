@@ -1,0 +1,27 @@
+.head, .lang, .navbar, .ul, .featured-item, .collection-item, .blog-item, .footer-content{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+.call-2-action, .call-to-action-2{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+  
+}
+.arrow-down{
+    margin-top: 100px;
+    align-self: center;
+}
+.featured, .collection, .blog, .blog-content, .footer, .footer-content-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+}
+
