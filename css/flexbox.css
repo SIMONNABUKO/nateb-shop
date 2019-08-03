@@ -20,7 +20,7 @@
     align-self: center;
 }
 .featured, .collection, .blog, .blog-content, .footer, .footer-content-item,
- .about, .about-content, .team{
+ .about, .about-content, .team, .contact{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
