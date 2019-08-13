@@ -39,12 +39,17 @@
     height: 40px;
     border: none;
     margin-top: 30px;
+    
 
 }
 [data-add-btn] :hover{
 width: 153px;
+cursor: pointer;
 }
 .shop-item-item a{
     text-decoration: none;
     color: #ffffff;
+}
+button{
+    cursor: pointer;
 }
