@@ -23,6 +23,9 @@ for(let i=0; i<buttons.length; i++ ){
        price.textContent = itemPrice;
        description = document.createElement('p');
        description.textContent = itemDescription;
+       removeButton = document.createElement('button');
+       removeButton.classList.add('remove-button');
+       removeButton.textContent = "Remove Item";
         console.log(title);
         console.log(price);
         console.log(description);
@@ -32,6 +35,7 @@ for(let i=0; i<buttons.length; i++ ){
        itemContainer.classList.add('basket-item-container');
        itemContainer.appendChild(title);
        itemContainer.appendChild(price);
+       itemContainer.appendChild(removeButton);
       //  itemContainer.appendChild(description);
          basket = document.querySelector('.basket');
        basket.appendChild(itemContainer);
@@ -48,10 +52,27 @@ for(let i=0; i<buttons.length; i++ ){
 
        console.log(itemContainer);
        console.log(basket);
+       updateCartTotal();
        
        
     })
 }
-        
+//Update cart total function
+const updateCartTotal = () =>{
+  cartItems = document.querySelectorAll('.basket-item-container');
+  cartTotal = document.querySelector('.cart-total');
+  console.log(cartItems);
+  total = 0;
+  for(let i=0; i<cartItems.length; i++){
+    oneCartItem = cartItems[i];
+    priceTag = oneCartItem.firstElementChild.nextElementSibling.textContent;
+    priceTagFormatted = priceTag.substr(1,4);
+    console.log(priceTagFormatted);
+    total += Number(priceTagFormatted);
+    cartTotal.textContent = total;
+  }
+};
+
    
 })();
+

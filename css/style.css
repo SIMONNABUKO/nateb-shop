@@ -166,7 +166,14 @@ background-size: cover;
     position:absolute;
     margin-left: 0%;
     margin-top: 0%;
-    padding: 10px;
+    padding: 5px 5px 5px 30px;
     display: none;
     
+}
+.remove-button{
+    background: #a88d7b;
+    color: #fff;
+}
+.basket h4{
+    color: green;
 }
