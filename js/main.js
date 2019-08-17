@@ -52,13 +52,14 @@ for(let i=0; i<buttons.length; i++ ){
 
        console.log(itemContainer);
        console.log(basket);
-       updateCartTotal();
+       displayCartTotal();
+       removeItemFromCart();
        
        
     })
 }
 //Update cart total function
-const updateCartTotal = () =>{
+const displayCartTotal = () =>{
   cartItems = document.querySelectorAll('.basket-item-container');
   cartTotal = document.querySelector('.cart-total');
   console.log(cartItems);
@@ -71,6 +72,40 @@ const updateCartTotal = () =>{
     total += Number(priceTagFormatted);
     cartTotal.textContent = total;
   }
+};
+//Remove Item From Cart Function
+const removeItemFromCart = () =>{
+  cartItemDivs = document.querySelectorAll('.basket-item-container');
+  for(let i=0; i<cartItemDivs.length; i++){
+    oneCartItemDiv = cartItemDivs[i];
+    removeButton = oneCartItemDiv.lastElementChild;
+    removeButton.addEventListener('click', (event) =>{
+      clickedRemoveButton = event.target;
+      cartItem = clickedRemoveButton.parentElement;
+      cartItem.remove();
+      updateCartTotal();
+      
+    });
+  }
+
+};
+const updateCartTotal = () =>{
+      let basket = document.querySelector('.basket');
+      let basketItemContainers = basket.querySelectorAll('basket-item-container');
+      let total = 0;
+      let grandTotal =parseFloat(document.querySelector('.cart-total').innerText);
+      for(let i =0; i<basketItemContainers.length; i++){
+        basketItemContainer = basketItemContainers[i];
+        priceElement = basketItemContainer.querySelector('.price-tag');
+        price = parseFloat(priceElement.innerText);
+        console.log(price);
+        total = total + price;
+        
+      }
+        currentTotal = parseFloat(document.querySelector('.cart-total').innerText);
+        grandTotal = currentTotal - total;
+        document.querySelector('.cart-total').innerText =grandTotal;
+      
 };
 
    
